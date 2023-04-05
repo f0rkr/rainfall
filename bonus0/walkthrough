@@ -22,7 +22,7 @@ than the size, the destination ends with a non-terminated character)
 
 So pp() function reads 2 (we will call them a and b) variables and copy them in the main buffer variable. So if the first buffer is non null-terminated the first strcpy will copy
 40bytes into the buffer since the next string in the stack after a is b. Then it copies a space which makes now 41bytes + the last string 20bytes. Which leaves
-us with 61bytes(61bytes - 54bytes = 19bytes).
+us with 61bytes(61bytes - 54bytes = 7bytes).
 
 We will be able to write 19bytes into the stack we just need to find the offset in which we will overwrite the eip.
 
