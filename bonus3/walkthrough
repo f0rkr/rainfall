@@ -1,6 +1,6 @@
-Once we are logged as bonus3/71d449df0f960b36e0055eb58c14d0f5d0ddc0b35328d657f91cf0df15910587
+Once we are logged as bonus3
 
-We are presented with a suid binary named bonus3.
+We are presented with a suid binary.
 
 After analysing the executable we find that the program calls fopen to open the file in /home/user/end/.pass
 

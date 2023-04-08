@@ -1,3 +1,9 @@
+void n(void)
+{
+  system("/bin/cat /home/user/level7/.pass");
+  return;
+}
+
 void main(int param_1,char **param_2)
 {
   char *dest;
@@ -11,9 +17,4 @@ void main(int param_1,char **param_2)
   return;
 }
 
-void n(void)
 
-{
-  system("/bin/cat /home/user/level7/.pass");
-  return;
-}

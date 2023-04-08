@@ -1,6 +1,6 @@
-Once we are logged as bonus1/cd1f77a585965341c37a1774a1d1686326e1fc53aaa5459c840409d4d06523c9
+Once we are logged as bonus1
 
-We are presented with a suid binary named bonus1.
+We are presented with a suid binary.
 
 After analysing the binary it seems that it contains only a main function that spawn a shell for bonus1
 But on some condition. Which is we need to overwrite a specific variable to spawn it.

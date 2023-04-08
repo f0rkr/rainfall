@@ -1,6 +1,6 @@
 Once we are logged as level0/level0
 
-We are presented with a suid binary named level0.
+We are presented with a suid binary.
 
 We try executing it 
 level0@RainFall:~$ ./level0

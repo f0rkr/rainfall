@@ -12,6 +12,5 @@ int main() {
     char var_40[64];
 
     gets(&var_40);
-
     return 0;
 }

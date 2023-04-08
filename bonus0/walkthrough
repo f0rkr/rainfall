@@ -1,6 +1,6 @@
-Once we are logged as bonus0/f3f0004b6f364cb5a4147e9ef827fa922a4861408845c26b6971ad770d906728
+Once we are logged as bonus0
 
-We are presented with a suid binary named level6.
+We are presented with a suid binary.
 
 We try executing it
 bonus0@RainFall:~$ ./bonus0
